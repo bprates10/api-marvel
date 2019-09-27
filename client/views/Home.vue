@@ -8,10 +8,18 @@
 <script>
 import SearchCharacterForm from 'components/SearchCharacterForm'
 import CharactersList from 'components/CharactersList'
-export default {
-  components: {
-    SearchCharacterForm,
-    CharactersList
+  export default {
+    data: function () {
+      return {
+        name: ''
+      }
+    },
+    components: {
+      SearchCharacterForm,
+      CharactersList
+    },
+    created: function() {
+        this.$store.dispatch('FETCH_CHARACTERS')
+    }
   }
-}
 </script>

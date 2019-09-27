@@ -9,7 +9,7 @@
         <div class="description">
           {{character.description}}
         </div>
-        <h2>Character Appearances</h2>
+        <h1>Character Appearances</h1>
         <div v-for="storie in character.stories.slice(0,5)">
           {{storie.name}}
         </div>
@@ -58,6 +58,6 @@ export default {
     transform: translate(-50%,-50%);
   }
   .ui.card, .ui.cards > .card {
-    width: 80%;
+    width: 346px;
   }
 </style>
